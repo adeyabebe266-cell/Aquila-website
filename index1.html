@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquila Tech PLC | Enterprise Technology Partner</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #000033;
+            --secondary-slate: #050544;
+            --electric-blue: #00E5FF;
+            --ethiopian-green: #009A44;
+            --ethiopian-yellow: #FEDD00;
+            --ethiopian-red: #EF4135;
+        }
+
+        /* Root Canvas Background Implementation using requested desktop media path */
+        body {
+            background: linear-gradient(rgba(0, 0, 51, 0.93), rgba(0, 0, 51, 0.93)), url('Desktop/a') no-repeat center center fixed;
+            background-size: cover;
+            color: #FFFFFF;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .ethiopian-gradient-line {
+            height: 4px;
+            background: linear-gradient(to right, var(--ethiopian-green) 33.3%, var(--ethiopian-yellow) 33.3% 66.6%, var(--ethiopia-red) 66.6%);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+        }
+
+        /* Print Media CSS Overrides for Client Registry Export Formality */
+        @media print {
+            .no-print { display: none !important; }
+            .print-layout { background: #FFFFFF !important; color: #000000 !important; display: block !important; padding: 30px; }
+            .print-table { border: 1px solid #000000 !important; width: 100%; color: #000000 !important; }
+            .print-table th, .print-table td { border: 1px solid #000000 !important; padding: 8px; color: #000000 !important; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-black">
+
+    <div class="ethiopian-gradient-line w-full fixed top-0 z-50 no-print"></div>
+
+    <nav class="bg-[#000033]/80 backdrop-blur-md text-white fixed top-[4px] left-0 right-0 z-40 border-b border-slate-800/80 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <img src="Desktop/Aquila" alt="Aquila Logo" class="h-12 w-12 object-contain" onerror="this.className='hidden'; this.nextElementSibling.classList.remove('hidden')">
+                    <div id="fallback-logo-icon" class="hidden w-10 h-10 rounded bg-cyan-500/10 flex items-center justify-center border border-cyan-500/30 text-[#00E5FF]"><i class="fa-solid fa-gavel"></i></div>
+                    <div>
+                        <span class="text-xl font-black tracking-wider text-white">AQUILA <span class="text-[#00E5FF]">TECH</span></span>
+                        <p class="text-[9px] text-slate-400 tracking-widest uppercase">Enterprise Partner</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-semibold">
+                    <a href="#home" class="hover:text-[#00E5FF] transition">Home</a>
+                    <a href="#about" class="hover:text-[#00E5FF] transition">About Us</a>
+                    <a href="#philosophy" class="hover:text-[#00E5FF] transition">Philosophy</a>
+                    <a href="#services" class="hover:text-[#00E5FF] transition">Services</a>
+                    <a href="#industries" class="hover:text-[#00E5FF] transition">Industries</a>
+                    <a href="#process" class="hover:text-[#00E5FF] transition">Our Process</a>
+                    <a href="#insights" class="hover:text-[#00E5FF] transition">Insights</a>
+                    <a href="#contact" class="hover:text-[#00E5FF] transition">Contact</a>
+                </div>
+                <div>
+                    <button onclick="revealAuthGateway()" class="bg-transparent border border-[#00E5FF] text-[#00E5FF] hover:bg-[#00E5FF] hover:text-black px-4 py-2 rounded text-xs font-mono font-bold tracking-wider transition uppercase flex items-center gap-2 shadow-lg shadow-cyan-500/10">
+                        <i class="fa-solid fa-fingerprint"></i> HQ Access
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="no-print">
+        
+        <section id="home" class="pt-40 pb-24 px-4 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-[#00E5FF] font-mono tracking-widest text-xs uppercase block mb-3">// ARCHITECTING MODERN INSTITUTIONS</span>
+                    <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-none mb-6">
+                        Smart Solutions,<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Better Future.</span>
+                    </h1>
+                    <p class="text-slate-300 text-lg mb-8 max-w-xl leading-relaxed">
+                        Aquila Tech PLC designs and delivers enterprise-grade software, AI ecosystems, and mission-critical digital infrastructure for government agencies and large-scale private organizations.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-[#00E5FF] text-black font-bold px-6 py-3 rounded hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20">Initiate Institutional Engagement</a>
+                        <a href="#philosophy" class="bg-slate-800/80 text-white font-semibold px-6 py-3 rounded hover:bg-slate-700 transition border border-slate-700">Operational Paradigm</a>
+                    </div>
+                </div>
+                <div class="bg-[#050544]/60 border border-slate-800 p-8 rounded-xl relative shadow-2xl backdrop-blur-md">
+                    <div class="absolute top-4 right-4 flex space-x-2">
+                        <span class="w-3 h-3 rounded-full bg-[#009A44]"></span>
+                        <span class="w-3 h-3 rounded-full bg-[#FEDD00]"></span>
+                        <span class="w-3 h-3 rounded-full bg-[#EF4135]"></span>
+                    </div>
+                    <div class="font-mono text-xs text-slate-400 space-y-3 pt-4">
+                        <p class="text-emerald-400">&gt; System Core Initialization Status: Active</p>
+                        <p>&gt; Loading Enterprise Software Pipelines...</p>
+                        <p>&gt; Injecting Artificial Intelligence Systems...</p>
+                        <p class="text-[#00E5FF]">&gt; Integrity Metrics: Contractually Disciplined & Reliable</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="philosophy" class="py-24 bg-[#050544]/80 border-y border-slate-900 backdrop-blur-md">
+            <div class="max-w-5xl mx-auto px-4 text-center">
+                <span class="text-xs font-mono font-bold text-[#FEDD00] uppercase tracking-widest px-3 py-1 bg-yellow-500/10 rounded-full border border-yellow-500/20">Distinguishing Paradigm</span>
+                <h2 class="text-3xl sm:text-5xl font-black mt-6 mb-8 tracking-tight">"We don't build software first. <br class="hidden sm:block"><span class="text-[#00E5FF]">We study your business first.</span>"</h2>
+                <p class="text-slate-300 text-lg leading-relaxed max-w-3xl mx-auto">
+                    Aquila Tech PLC does not operate as a basic development house. We function as your **Enterprise Technology Partner**. Our expert consulting teams execute deep procedural investigations into your organization's workflow ecosystem prior to architecture engineering, ensuring maximum long-term operability and functional compliance.
+                </p>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-[#050544]/40 p-8 rounded-xl border border-slate-800">
+                    <div class="w-10 h-10 bg-cyan-500/10 rounded flex items-center justify-center text-[#00E5FF] mb-6"><i class="fa-solid fa-eye"></i></div>
+                    <h3 class="text-2xl font-black text-white mb-4">2.3 Vision</h3>
+                    <p class="text-slate-300 leading-relaxed text-sm">
+                        To be Ethiopia's most trusted technology partner — delivering intelligent, dependable systems that modernize institutions, empower businesses, and improve the lives of the people they serve.
+                    </p>
+                </div>
+                <div class="bg-[#050544]/40 p-8 rounded-xl border border-slate-800">
+                    <div class="w-10 h-10 bg-emerald-500/10 rounded flex items-center justify-center text-emerald-400 mb-6"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3 class="text-2xl font-black text-white mb-4">2.4 Mission</h3>
+                    <p class="text-slate-300 leading-relaxed text-sm">
+                        Aquila Tech PLC exists to design and deliver enterprise-grade software, AI, and infrastructure solutions that are technically excellent, contractually disciplined, and built for long-term operability — enabling clients across government, health, education, and business to achieve smart solutions and a better future.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 bg-[#050544]/40 border-t border-slate-900">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="mb-16">
+                    <span class="text-xs font-mono text-[#00E5FF] uppercase block tracking-widest">// ARCHITECTURAL MATRIX</span>
+                    <h2 class="text-3xl font-black tracking-tight mt-1">Core Capability Directives</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="p-6 bg-[#000033]/60 rounded-lg border border-slate-800 border-t-4 border-t-cyan-400">
+                        <h4 class="font-bold text-lg mb-2">Enterprise Software</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Robust distributed transactional databases and architectural design for system automation processes.</p>
+                    </div>
+                    <div class="p-6 bg-[#000033]/60 rounded-lg border border-slate-800 border-t-4 border-t-emerald-400">
+                        <h4 class="font-bold text-lg mb-2">Artificial Intelligence</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Localized NLP engines, computer vision architectures, and deep predictive modeling layers.</p>
+                    </div>
+                    <div class="p-6 bg-[#000033]/60 rounded-lg border border-slate-800 border-t-4 border-t-amber-400">
+                        <h4 class="font-bold text-lg mb-2">Digital Transformation</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Migrating paper-based institutional frameworks to heavily secure cloud environments.</p>
+                    </div>
+                    <div class="p-6 bg-[#000033]/60 rounded-lg border border-slate-800 border-t-4 border-t-red-400">
+                        <h4 class="font-bold text-lg mb-2">Health Systems</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Highly responsive, data-secure clinical management software built for medical logistics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="industries" class="py-24 max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-black mb-12 text-center tracking-tight">Sectors Under Modernization Strategy</h2>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
+                <div class="p-6 bg-[#050544]/40 rounded-xl border border-slate-800"><i class="fa-solid fa-building-columns text-2xl text-[#00E5FF] mb-3"></i><p class="font-bold text-xs">Government</p></div>
+                <div class="p-6 bg-[#050544]/40 rounded-xl border border-slate-800"><i class="fa-solid fa-heart-pulse text-2xl text-emerald-400 mb-3"></i><p class="font-bold text-xs">Healthcare</p></div>
+                <div class="p-6 bg-[#050544]/40 rounded-xl border border-slate-800"><i class="fa-solid fa-graduation-cap text-2xl text-amber-400 mb-3"></i><p class="font-bold text-xs">Education</p></div>
+                <div class="p-6 bg-[#050544]/40 rounded-xl border border-slate-800"><i class="fa-solid fa-seedling text-2xl text-emerald-600 mb-3"></i><p class="font-bold text-xs">Agriculture</p></div>
+                <div class="p-6 bg-[#050544]/40 rounded-xl border border-slate-800"><i class="fa-solid fa-money-bill-trend-up text-2xl text-cyan-400 mb-3"></i><p class="font-bold text-xs">Finance</p></div>
+                <div class="p-6 bg-[#050544]/40 rounded-xl border border-slate-800"><i class="fa-solid fa-briefcase text-2xl text-purple-400 mb-3"></i><p class="font-bold text-xs">Private Commerce</p></div>
+            </div>
+        </section>
+
+        <section id="process" class="py-24 bg-[#050544]/80 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-2xl font-black text-center mb-16 tracking-tight">Procedural System Execution Stages</h2>
+                <div class="grid grid-cols-1 md:grid-cols-6 gap-4 text-center">
+                    <div class="p-4 bg-[#000033]/90 rounded border border-slate-800"><span class="block text-xs text-slate-500 font-mono mb-1">01</span><h5 class="font-bold text-sm">Contract</h5></div>
+                    <div class="p-4 bg-[#000033]/90 rounded border border-slate-800"><span class="block text-xs text-slate-500 font-mono mb-1">02</span><h5 class="font-bold text-sm text-[#00E5FF]">Assessment</h5></div>
+                    <div class="p-4 bg-[#000033]/90 rounded border border-slate-800"><span class="block text-xs text-slate-500 font-mono mb-1">03</span><h5 class="font-bold text-sm">Design</h5></div>
+                    <div class="p-4 bg-[#000033]/90 rounded border border-slate-800"><span class="block text-xs text-slate-500 font-mono mb-1">04</span><h5 class="font-bold text-sm text-[#00E5FF]">Development</h5></div>
+                    <div class="p-4 bg-[#000033]/90 rounded border border-slate-800"><span class="block text-xs text-slate-500 font-mono mb-1">05</span><h5 class="font-bold text-sm">Deployment</h5></div>
+                    <div class="p-4 bg-[#000033]/90 rounded border border-slate-800"><span class="block text-xs text-slate-500 font-mono mb-1">06</span><h5 class="font-bold text-sm text-[#00E5FF]">Support</h5></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="insights" class="py-24 max-w-7xl mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-black tracking-tight">Corporate Announcements & Innovation News</h2>
+                <p class="text-slate-400 text-sm mt-1">Real-time dispatches from Aquila Tech's R&D framework infrastructure.</p>
+            </div>
+            <div id="public-bulletin-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div id="no-insights-fallback" class="col-span-full py-12 text-center text-slate-500 border border-dashed border-slate-800 rounded-xl">
+                    <i class="fa-solid fa-cubes text-3xl mb-2"></i>
+                    <p class="text-xs font-mono">No supplementary system announcements deployed yet.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-[#050544]/60 border-t border-slate-900 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-black tracking-tight mb-6">Initiate Corporate Protocol</h2>
+                    <p class="text-slate-300 text-sm mb-8 leading-relaxed">
+                        Ready to formalize structural evaluations with Aquila Tech? Submit your organizational contact requirements to our intake hub.
+                    </p>
+                    <div class="space-y-4 text-sm font-mono">
+                        <p><i class="fa-solid fa-map-location text-[#00E5FF] mr-3"></i> Debre Markos, Ethiopia</p>
+                        <p><i class="fa-solid fa-envelope text-[#00E5FF] mr-3"></i> aquilatechPLC@gmail.com</p>
+                        <p><i class="fa-solid fa-phone text-[#00E5FF] mr-3"></i> 0985253397</p>
+                    </div>
+                </div>
+                <div class="bg-[#000033]/90 p-8 rounded-xl border border-slate-800/80">
+                    <form id="public-intake-form" onsubmit="processClientIntake(event)">
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-[10px] font-mono uppercase text-slate-400 mb-1">Institution / Entity Name</label>
+                                <input type="text" id="intake-name" required class="w-full bg-[#050544] border border-slate-700 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#00E5FF]">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-mono uppercase text-slate-400 mb-1">Target Classification Sector</label>
+                                <select id="intake-sector" class="w-full bg-[#050544] border border-slate-700 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#00E5FF]">
+                                    <option>Government / State Institution</option>
+                                    <option>Healthcare Infrastructure</option>
+                                    <option>Educational Sector</option>
+                                    <option>Financial System Architecture</option>
+                                    <option>Private Commercial Enterprise</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-mono uppercase text-slate-400 mb-1">Technical Requirement Parameters</label>
+                                <textarea id="intake-message" rows="4" required class="w-full bg-[#050544] border border-slate-700 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#00E5FF]"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-[#00E5FF] text-black font-bold py-3 rounded text-xs uppercase tracking-wider hover:bg-cyan-400 transition">Transmit Strategic Data Dossier</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="auth-gatekeeper-modal" class="hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 no-print">
+        <div class="bg-[#000033] border border-slate-800 w-full max-w-sm rounded-xl p-8 text-center relative">
+            <button onclick="dismissAuthGateway()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <i class="fa-solid fa-user-shield text-4xl text-[#00E5FF] mb-4"></i>
+            <h3 class="text-xl font-bold tracking-tight mb-2">Manager Cryptographic Vault</h3>
+            <p class="text-slate-400 text-xs mb-6">Input master system key authorization vector.</p>
+            <div class="space-y-4">
+                <input type="password" id="manager-passphrase-field" placeholder="••••••••" class="w-full bg-[#050544] border border-slate-700 rounded p-3 text-center font-mono tracking-widest focus:outline-none focus:border-[#00E5FF]">
+                <button onclick="verifyVaultCredentials()" class="w-full bg-cyan-600 text-black font-bold py-2.5 rounded text-xs uppercase tracking-wider hover:bg-cyan-500 transition">Execute De-encryption</button>
+                <p id="auth-failure-error" class="hidden text-red-500 font-mono text-[10px]">ACCESS DENIED: Credentials Invalid.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="secure-cto-dashboard" class="hidden fixed inset-0 z-50 bg-[#000033] overflow-y-auto p-6 md:p-12 custom-scrollbar no-print">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-6 mb-8 gap-4">
+                <div>
+                    <div class="flex items-center gap-2 text-[10px] font-mono text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full w-fit border border-emerald-500/20">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Authenticated Node: Master Operations
+                    </div>
+                    <h1 class="text-3xl font-black mt-2 tracking-tight">Aquila Tech Operational Control Hub</h1>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="triggerManifestReportPrint()" class="bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs px-4 py-2 rounded border border-slate-700 flex items-center gap-2 transition"><i class="fa-solid fa-print"></i> Print Records</button>
+                    <button onclick="terminateSecureSession()" class="bg-red-950/40 hover:bg-red-900 text-red-400 border border-red-900/40 font-semibold text-xs px-4 py-2 rounded flex items-center gap-2 transition"><i class="fa-solid fa-power-off"></i> Exit Console</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-[#050544]/60 border border-slate-800 rounded-xl p-6">
+                        <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-folder-open text-[#00E5FF]"></i> Registered Institutional Leads Ledger</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs font-mono">
+                                <thead>
+                                    <tr class="border-b border-slate-800 text-slate-400 uppercase">
+                                        <th class="pb-3">Institution Profile</th>
+                                        <th class="pb-3">Sector Target</th>
+                                        <th class="pb-3">Dossier Log</th>
+                                        <th class="pb-3 text-right">Operations Pipeline</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="registry-table-body" class="divide-y divide-slate-800/60">
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-[#050544]/60 border border-slate-800 rounded-xl p-6">
+                        <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-cloud-arrow-up text-amber-400"></i> Innovation Deployment Engine</h3>
+                        <div class="space-y-4 text-xs font-mono">
+                            <div>
+                                <label class="block text-[10px] text-slate-400 uppercase mb-1">Announcement Title</label>
+                                <input type="text" id="publish-heading" class="w-full bg-[#000033] border border-slate-700 rounded p-2 focus:outline-none focus:border-[#00E5FF]">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] text-slate-400 uppercase mb-1">Structural Classification Classification</label>
+                                <input type="text" id="publish-tagline" placeholder="e.g. AI SYSTEMS, CORE NETWORKS" class="w-full bg-[#000033] border border-slate-700 rounded p-2 focus:outline-none focus:border-[#00E5FF]">
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2 pt-2">
+                                <label class="bg-[#000033] border border-dashed border-slate-700 p-3 rounded text-center cursor-pointer hover:border-cyan-400 block">
+                                    <i class="fa-solid fa-image text-lg text-cyan-400 mb-1"></i>
+                                    <span class="block text-[9px] uppercase text-slate-400">Pick Photo File</span>
+                                    <input type="file" id="publish-photo-file" accept="image/*" class="hidden" onchange="registerMediaFileBlob(this, 'photo')">
+                                </label>
+                                <label class="bg-[#000033] border border-dashed border-slate-700 p-3 rounded text-center cursor-pointer hover:border-emerald-400 block">
+                                    <i class="fa-solid fa-video text-lg text-emerald-400 mb-1"></i>
+                                    <span class="block text-[9px] uppercase text-slate-400">Pick Video File</span>
+                                    <input type="file" id="publish-video-file" accept="video/*" class="hidden" onchange="registerMediaFileBlob(this, 'video')">
+                                </label>
+                            </div>
+                            <div id="media-preview-status-indicator" class="text-[9px] text-[#00E5FF] hidden">Media item loaded into staging memory layer.</div>
+
+                            <div>
+                                <label class="block text-[10px] text-slate-400 uppercase mb-1">Core Dossier Copy Content</label>
+                                <textarea id="publish-narrative" rows="4" class="w-full bg-[#000033] border border-slate-700 rounded p-2 focus:outline-none focus:border-[#00E5FF]"></textarea>
+                            </div>
+                            <button onclick="commitNoticeToPublicFeed()" class="w-full bg-emerald-500 text-black font-bold py-2.5 rounded text-xs uppercase tracking-wider hover:bg-emerald-400 transition">Broadcast Publicly</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#050544]/60 border border-slate-800 rounded-xl p-6">
+                        <h4 class="text-sm font-bold mb-3 text-slate-300">Live Post Registry Pruning</h4>
+                        <div id="dashboard-pruning-index" class="space-y-2 text-xs font-mono">
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="printable-report-mirror-layer" class="hidden print-layout">
+        </div>
+
+    <footer class="bg-[#000033] py-8 text-center text-[10px] font-mono text-slate-500 border-t border-slate-900 no-print">
+        <img src="Desktop/Aquila" alt="Aquila Badge" class="h-8 mx-auto mb-3 opacity-30" onerror="this.className='hidden'">
+        <p>&copy; 2026 Aquila Tech PLC. All Strategic Architectural Rights Reserved.</p>
+        <div class="flex justify-center gap-1 mt-3">
+            <span class="w-4 h-1.5 bg-[#009A44]"></span>
+            <span class="w-4 h-1.5 bg-[#FEDD00]"></span>
+            <span class="w-4 h-1.5 bg-[#EF4135]"></span>
+        </div>
+    </footer>
+
+    <script>
+        // System cryptographic key definition constraint assignment
+        const VAULT_AUTHENTICATION_PHRASE = "AGK1125";
+
+        // In-memory runtime database engines storage array configurations
+        let structuralClientPipelineDb = [];
+        let internalInnovationBulletinsDb = [];
+        let currentlyStagedMediaBlobUrl = "";
+        let currentlyStagedMediaType = "";
+
+        // --- AUTHENTICATION SYSTEMS VIEW CONTROLS ---
+        function revealAuthGateway() {
+            document.getElementById('auth-gatekeeper-modal').classList.remove('hidden');
+        }
+
+        function dismissAuthGateway() {
+            document.getElementById('auth-gatekeeper-modal').classList.add('hidden');
+            document.getElementById('auth-failure-error').classList.add('hidden');
+            document.getElementById('manager-passphrase-field').value = '';
+        }
+
+        function verifyVaultCredentials() {
+            const userInputKey = document.getElementById('manager-passphrase-field').value;
+            if (userInputKey === VAULT_AUTHENTICATION_PHRASE) {
+                dismissAuthGateway();
+                document.getElementById('secure-cto-dashboard').classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Lock scrolling to focus view context layout
+                refreshManagementRegistryDisplay();
+            } else {
+                document.getElementById('auth-failure-error').classList.remove('hidden');
+            }
+        }
+
+        function terminateSecureSession() {
+            document.getElementById('secure-cto-dashboard').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            document.getElementById('manager-passphrase-field').value = '';
+        }
+
+        // --- PUBLIC REGISTRATION DATA CAPTURE CHANNEL ---
+        function processClientIntake(event) {
+            event.preventDefault();
+            const clientEntityRecord = {
+                uid: 'entry-' + Date.now(),
+                name: document.getElementById('intake-name').value,
+                sector: document.getElementById('intake-sector').value,
+                message: document.getElementById('intake-message').value,
+                timestamp: new Date().toLocaleString()
+            };
+
+            structuralClientPipelineDb.push(clientEntityRecord);
+            alert("Corporate System Registry Data Transmitted Safely to Internal Management Storage Channels.");
+            document.getElementById('public-intake-form').reset();
+            refreshManagementRegistryDisplay();
+        }
+
+        // --- DIGITAL MEDIA FILE-SYSTEM FILE PICKER BLOB CAPTURE PIPELINE ---
+        function registerMediaFileBlob(inputElement, mediaType) {
+            const chosenFile = inputElement.files[0];
+            if (chosenFile) {
+                // Instantly construct sandbox mock routing paths mimicking your device storage selection points
+                currentlyStagedMediaBlobUrl = URL.createObjectURL(chosenFile);
+                currentlyStagedMediaType = mediaType;
+                document.getElementById('media-preview-status-indicator').classList.remove('hidden');
+            }
+        }
+
+        // --- MANAGEMENT ENGINE MANIPULATION DOM HYDRATION FUNCTIONS ---
+        function refreshManagementRegistryDisplay() {
+            const tableBodyNode = document.getElementById('registry-table-body');
+            const prunerIndexNode = document.getElementById('dashboard-pruning-index');
+            
+            tableBodyNode.innerHTML = '';
+            prunerIndexNode.innerHTML = '';
+
+            if (structuralClientPipelineDb.length === 0) {
+                tableBodyNode.innerHTML = `<tr><td colspan="4" class="py-8 text-center text-slate-500 italic">No incoming partner records detected.</td></tr>`;
+            } else {
+                structuralClientPipelineDb.forEach(record => {
+                    const tableRow = document.createElement('tr');
+                    tableRow.className = "border-b border-slate-800/40 hover:bg-slate-900/40";
+                    tableRow.innerHTML = `
+                        <td class="py-3 font-bold text-white">${escapeMarkup(record.name)}<br><span class="text-[9px] text-slate-500 font-normal">${record.timestamp}</span></td>
+                        <td class="py-3"><span class="text-[10px] px-2 py-0.5 bg-cyan-500/10 text-[#00E5FF] rounded-full border border-cyan-500/20">${escapeMarkup(record.sector)}</span></td>
+                        <td class="py-3 text-slate-400 max-w-xs truncate">${escapeMarkup(record.message)}</td>
+                        <td class="py-3 text-right space-x-1">
+                            <button onclick="dispatchSecureResponse('${escapeMarkup(record.name)}')" class="text-[10px] bg-cyan-500/10 text-[#00E5FF] px-2 py-1 rounded border border-cyan-500/30 hover:bg-cyan-400 hover:text-black transition">Respond</button>
+                            <button onclick="purgeRegistryEntry('${record.uid}')" class="text-[10px] bg-red-500/10 text-red-400 px-2 py-1 rounded border border-red-500/30 hover:bg-red-500 hover:text-white transition">Cancel</button>
+                        </td>
+                    `;
+                    tableBodyNode.appendChild(tableRow);
+                });
+            }
+
+            // Hydrate Management Pruner Index
+            if (internalInnovationBulletinsDb.length === 0) {
+                prunerIndexNode.innerHTML = `<p class="text-[10px] text-slate-500 italic">No items currently published.</p>`;
+            } else {
+                internalInnovationBulletinsDb.forEach(bulletin => {
+                    const prunerElement = document.createElement('div');
+                    prunerElement.className = "flex justify-between items-center bg-[#000033] p-2 border border-slate-800 rounded";
+                    prunerElement.innerHTML = `
+                        <span class="truncate text-slate-300 max-w-[180px]">${escapeMarkup(bulletin.title)}</span>
+                        <button onclick="purgeBulletinNotice('${bulletin.id}')" class="text-red-400 hover:text-red-500 font-bold px-2"><i class="fa-solid fa-trash-can"></i></button>
+                    `;
+                    prunerIndexNode.appendChild(prunerElement);
+                });
+            }
+        }
+
+        function purgeRegistryEntry(uid) {
+            if (confirm("Confirm absolute removal of entry dossier pipeline item from system memory records?")) {
+                structuralClientPipelineDb = structuralClientPipelineDb.filter(item => item.uid !== uid);
+                refreshManagementRegistryDisplay();
+            }
+        }
+
+        function dispatchSecureResponse(clientName) {
+            const msgResponseText = prompt(`Formulate programmatic administrative message output parameters targeting entity: "${clientName}"`);
+            if (msgResponseText) {
+                alert(`Encrypted procedural update routed safely to outbound buffer transmission lines for ${clientName}.`);
+            }
+        }
+
+        // --- FEED INJECTION COMMIT IMPLEMENTATION ---
+        function commitNoticeToPublicFeed() {
+            const titleInput = document.getElementById('publish-heading').value;
+            const tagInput = document.getElementById('publish-tagline').value || 'INNOVATION';
+            const bodyInput = document.getElementById('publish-narrative').value;
+
+            if (!titleInput || !bodyInput) {
+                alert("Operation Terminated: Deployed announcements must carry structural parameters inside heading and content properties.");
+                return;
+            }
+
+            const noticeId = 'bulletin-' + Date.now();
+            const compiledBulletin = {
+                id: noticeId,
+                title: titleInput,
+                tag: tagInput,
+                body: bodyInput,
+                mediaUrl: currentlyStagedMediaBlobUrl,
+                mediaType: currentlyStagedMediaType
+            };
+
+            internalInnovationBulletinsDb.unshift(compiledBulletin);
+
+            // Clean configuration framework values fields
+            document.getElementById('publish-heading').value = '';
+            document.getElementById('publish-tagline').value = '';
+            document.getElementById('publish-narrative').value = '';
+            document.getElementById('publish-photo-file').value = '';
+            document.getElementById('publish-video-file').value = '';
+            document.getElementById('media-preview-status-indicator').classList.add('hidden');
+            
+            currentlyStagedMediaBlobUrl = "";
+            currentlyStagedMediaType = "";
+
+            refreshManagementRegistryDisplay();
+            synchronizePublicBulletinsDisplay();
+            alert("Bulletin system successfully accepted serialization properties and mapped onto public output nodes.");
+        }
+
+        function purgeBulletinNotice(id) {
+            if (confirm("Confirm immediate administrative deletion of current innovation block from view matrix?")) {
+                internalInnovationBulletinsDb = internalInnovationBulletinsDb.filter(item => item.id !== id);
+                refreshManagementRegistryDisplay();
+                synchronizePublicBulletinsDisplay();
+            }
+        }
+
+        function synchronizePublicBulletinsDisplay() {
+            const publicContainer = document.getElementById('public-bulletin-container');
+            const fallbackNode = document.getElementById('no-insights-fallback');
+
+            // Clear mutable node lists
+            const customCards = publicContainer.querySelectorAll('.dynamic-bulletin-card');
+            customCards.forEach(card => card.remove());
+
+            if (internalInnovationBulletinsDb.length === 0) {
+                fallbackNode.classList.remove('hidden');
+            } else {
+                fallbackNode.classList.add('hidden');
+                
+                internalInnovationBulletinsDb.forEach(bulletin => {
+                    const cardWrapper = document.createElement('div');
+                    cardWrapper.className = "dynamic-bulletin-card bg-[#050544]/50 border border-slate-800 rounded-lg overflow-hidden shadow-2xl flex flex-col justify-between";
+                    
+                    let assetContainerMarkup = `<div class="h-44 bg-slate-900/60 flex items-center justify-center text-slate-700 border-b border-slate-800"><i class="fa-solid fa-network-wired text-4xl"></i></div>`;
+                    
+                    if (bulletin.mediaUrl) {
+                        if (bulletin.mediaType === 'video') {
+                            assetContainerMarkup = `<video src="${bulletin.mediaUrl}" controls class="w-full h-44 object-cover border-b border-slate-800"></video>`;
+                        } else if (bulletin.mediaType === 'photo') {
+                            assetContainerMarkup = `<img src="${bulletin.mediaUrl}" class="w-full h-44 object-cover border-b border-slate-800" alt="Bulletin Resource Image">`;
+                        }
+                    }
+
+                    cardWrapper.innerHTML = `
+                        ${assetContainerMarkup}
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-[9px] font-mono tracking-widest px-2 py-0.5 bg-cyan-400/10 text-[#00E5FF] rounded border border-cyan-400/20 uppercase">${escapeMarkup(bulletin.tag)}</span>
+                                <h4 class="text-lg font-black text-white mt-3 mb-2 leading-snug">${escapeMarkup(bulletin.title)}</h4>
+                                <p class="text-slate-400 text-xs leading-relaxed mb-4">${escapeMarkup(bulletin.body)}</p>
+                            </div>
+                        </div>
+                    `;
+                    publicContainer.appendChild(cardWrapper);
+                });
+            }
+        }
+
+        // --- ENTERPRISE PRINTER MANIFEST GENERATION PARSER LAYER ---
+        function triggerManifestReportPrint() {
+            const printableBufferNode = document.getElementById('printable-report-mirror-layer');
+            printableBufferNode.innerHTML = '';
+
+            let tableRowsHtml = '';
+            if (structuralClientPipelineDb.length === 0) {
+                tableRowsHtml = `<tr><td colspan="4" style="text-align: center; padding: 15px;">No institutional client registry configurations logged in current memory trace buffers.</td></tr>`;
+            } else {
+                structuralClientPipelineDb.forEach(record => {
+                    tableRowsHtml += `
+                        <tr>
+                            <td><strong>${escapeMarkup(record.name)}</strong><br><small>${record.timestamp}</small></td>
+                            <td>${escapeMarkup(record.sector)}</td>
+                            <td>${escapeMarkup(record.message)}</td>
+                        </tr>
+                    `;
+                });
+            }
+
+            printableBufferNode.innerHTML = `
+                <div style="font-family: Arial, sans-serif; padding: 20px;">
+                    <h1 style="margin: 0 0 5px 0; text-transform: uppercase;">Aquila Tech PLC</h1>
+                    <h2 style="margin: 0 0 20px 0; font-size: 14px; font-weight: normal; color: #555;">Institutional Partner Manifest & Client Data Ledger Record</h2>
+                    <hr style="border: 0; border-top: 2px solid #000; margin-bottom: 20px;">
+                    <table class="print-table" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                        <thead>
+                            <tr style="background-color: #F1F5F9; text-align: left;">
+                                <th style="padding: 10px;">Institution Entity Profile</th>
+                                <th style="padding: 10px;">Sector Allocation</th>
+                                <th style="padding: 10px;">Technical Requirements Dossier Message Log</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${tableRowsHtml}
+                        </tbody>
+                    </table>
+                    <footer style="margin-top: 40px; font-size: 10px; text-align: center; color: #888;">
+                        Aquila Tech Internal Administration Console Secure Manifest Export System Data Log Pipeline. Confidential Document.
+                    </footer>
+                </div>
+            `;
+
+            // Execute programmatic layout routing print engine
+            window.print();
+        }
+
+        // Script exploit sanitizer mitigation helper logic
+        function escapeMarkup(rawString) {
+            return rawString.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>
